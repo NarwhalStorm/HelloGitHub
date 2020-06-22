@@ -1,0 +1,81 @@
+1. Установка на ubuntu
+
+	sudo apt-get install git
+
+
+2. Настройки гита
+	
+	- указание имени пользователя
+	
+	git config --global user.name "Andrey Chen-Yun-Tay"
+	
+	- адресс почты
+	
+	git config --global user.email "andrej.kostikov.irk@gmail.com"
+	
+	- показать список конфигураций
+	
+	git config -l
+	
+	cat .gitconfig
+	
+	
+3. Локальное использование 
+	
+	- в текущей директории сделать базу данных гита
+	
+	git init .
+	
+	- что сейчас происходит
+	
+	git status
+	
+	- добавление файлов 
+	
+	git add * ( or git add . )
+	
+	- сделать снимок 
+	
+	git commit -m "My first comment on github"
+	
+	- история всех комитов
+	
+	git log
+	
+	- посмотреть последний коммит
+	
+	git log -1
+	
+	- что было зделано при последнем коммите
+	
+	git log -1 -p
+	
+	- если терминал зависнет при команде последей клавиша q это выход
+	
+	- внесли изменения сохранили и нужно вернуть как было
+	
+	git checkout -- <filename>
+	
+	- посмотреть что будет записано в лог до команды коммит
+	
+	git diff --staged
+	
+	- список файлов для игнорирования
+	
+	nano .gitignore
+	
+	- пример содежимого 
+	
+	*.log
+	logs/
+	
+	
+4. Для удаленной работы
+	
+	- клонирование репозитория
+	
+	git clone https://github.com/NarwhalStorm/HelloGitHub.git
+	
+	- отправить изменения в удаленный репозиторий . нужно будет ввести логин/пароль
+	
+	git push origin

@@ -79,3 +79,35 @@
 	- отправить изменения в удаленный репозиторий . нужно будет ввести логин/пароль
 	
 	git push origin
+
+
+5. Подключение через SSH
+
+    - генерация ключа
+
+    ssh-keygen
+
+    - проверить что ключи появились
+
+    ll ~/.ssh/
+    
+    - отбразить в терминале содержимое ключа id_rsa.pub
+
+    cat ~/.ssh/id_rsa.pub
+
+    - скопировать содержимое ключа . 
+      перейти в github > settings > SSH and GPG kes
+      создать новый ssh-key
+
+    - посмотреть как ссылка сейчас есть
+
+    git remote -v
+
+    - скопировать ssh ссылку
+
+    - поменять ссылку https на ssh
+
+    git remote set-url origin git@github.com:NarwhalStorm/HelloGitHub.git
+
+    - теперь проверка при пуше идет по ssh
+    
